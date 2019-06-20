@@ -37,6 +37,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    '172.18.32.202',
 ]
 
 # Application definition
@@ -52,6 +53,7 @@ INSTALLED_APPS = (
     'djkombu',  # Add support for the django:// broker
     'accounts',
     'dashboard',
+    'gunicorn'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -136,9 +138,7 @@ USE_TZ = False  # 不使用时区的时间，默认使用机器的系统时间
 STATIC_URL = '/static/'
 
 # 定位到哪个文件夹
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+STATICFILES_DIRS = os.path.join(BASE_DIR, "static")
 
 # TEMPLATE_DIRS = (
 #     os.path.join(BASE_DIR, 'templates'),
@@ -244,14 +244,14 @@ ACCESS_LOG_DETAIL_MAX_BODY_LENGTH = 1024 * 50
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
 REDIS_DB = 0
-REDIS_PASSWORD = 'secret'
+REDIS_PASSWORD = '123456'
 
 # MongoDB 配置
 MONGO_HOST = '127.0.0.1'
 MONGO_PORT = 27017
-MONGO_USERNAME = 'fomalhaut_test'
-MONGO_PASSWORD = 'fomalhaut_test_P@ssw0rd'
-MONGO_DBNAME = 'fomalhaut_test'
+MONGO_USERNAME = 'kevin'
+MONGO_PASSWORD = '123456'
+MONGO_DBNAME = 'admin'
 
 connect(
     db=MONGO_DBNAME,

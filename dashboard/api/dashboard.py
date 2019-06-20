@@ -109,10 +109,10 @@ def get_total_count(request):
     today = datetime.today()
     yesterday = datetime.today() - timedelta(days=1)
     yesterday_2 = datetime.today() - timedelta(days=2)
-    total_count = AccessTotalDayCounter.objects().aggregate_sum('count')
-    today_count = AccessTotalDayCounter.objects(date__lte=today, date__gt=yesterday).aggregate_sum('count')
-    yesterday_count = AccessTotalDayCounter.objects(date__lte=yesterday, date__gt=yesterday_2).aggregate_sum('count')
-
+    total_count = AccessTotalDayCounter.objects().sum('count')
+    today_count = AccessTotalDayCounter.objects(date__lte=today, date__gt=yesterday).sum('count')
+    yesterday_count = AccessTotalDayCounter.objects(date__lte=yesterday, date__gt=yesterday_2).sum('count')
+``
     data = {
         'total_count': total_count,
         'today_count': today_count,

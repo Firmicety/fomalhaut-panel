@@ -25,7 +25,7 @@
             "access_token_ex": 864000, 
             "enable": true, 
             "id": 3, 
-            "login_auth_url": "http://127.0.0.1:8001/login/", 
+            "login_auth_url": "http://127.0.0.1:4000/login/", 
             "memo": "", 
             "name": "test_client", 
             "refresh_token_ex": 1728000, 
@@ -81,10 +81,10 @@
             "is_builtin": false, 
             "memo": "", 
             "name": "test_api", 
-            "netloc": "127.0.0.1:8001", 
+            "netloc": "127.0.0.1:4000", 
             "require_login": false, 
             "unique_name": "TestAPI", 
-            "url": "http://127.0.0.1:8001", 
+            "url": "http://127.0.0.1:4000", 
             "version": "v1"
         }, 
         {
@@ -103,10 +103,10 @@
             "is_builtin": false, 
             "memo": "", 
             "name": "test_api_login", 
-            "netloc": "127.0.0.1:8001", 
+            "netloc": "127.0.0.1:4000", 
             "require_login": true, 
             "unique_name": "TestAPILogin", 
-            "url": "http://127.0.0.1:8001", 
+            "url": "http://127.0.0.1:4000", 
             "version": "v1"
         }
     ]

@@ -78,3 +78,5 @@ target/
 /celerybeat-schedule
 */migrations
 /logs
+/data
+/log
